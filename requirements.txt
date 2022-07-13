@@ -21,6 +21,7 @@ slackclient==2.9.3
 celery==5.0.0
 kombu==5.0.2
 vine==5.0.0
+postgres==3.0.0
 
 django-queryset-csv~=1.1.0
 django-ckeditor==6.0.0
