@@ -13,7 +13,7 @@ handler400 = 'djangoProject.views.handler400'
 handler403 = 'djangoProject.views.handler403'
 
 urlpatterns = [
-    path('sushiksha/admin/', admin.site.urls, name='admin'),
+    path('GeekCoders/admin/', admin.site.urls, name='admin'),
     path('message/', send_message, name='message-send'),
     path('house/<int:id>', views.house, name='house'),
     path('team/<int:id>', views.team, name='team'),
@@ -33,14 +33,14 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('user/', include('users.urls')),
     path('', include('contact.urls')),
-    path('badge/', include('badge.urls')),
+    #path('badge/', include('badge.urls')),
     path('blog/', include('blog.urls')),
-    path('about/', views.about, name='about'),
+    #path('about/', views.about, name='about'),
     path('tinymce/', include('tinymce.urls')),
-    path('goodies/', include('goodies.urls')),
-    url('practice/', include('quiz.urls')),
-    url('coding/', include('coding.urls')),
-    url('okr/', include('OKR.urls')),
+    #path('goodies/', include('goodies.urls')),
+    #url('practice/', include('quiz.urls')),
+    #url('coding/', include('coding.urls')),
+    #url('okr/', include('OKR.urls')),
 ]
 
 if settings.DEBUG:
