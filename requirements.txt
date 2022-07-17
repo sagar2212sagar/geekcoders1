@@ -34,3 +34,5 @@ requests~=2.25.1
 django-colorfield==0.4.1
 django-mathfilters==1.0.0
 
+pyodbc
+django-pyodbc-azure
