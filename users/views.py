@@ -14,7 +14,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from djqscsv import render_to_csv_response
-from OKR.models import Entry
+#from OKR.models import Entry
 from .forms import UserUpdateForm, ProfileUpdateForm, RewardForm, UserRegisterForm, BadgeForm, RangeRequestForm, \
     UserRangeRequestForm, MultiBadgeForm
 from .models import Badge, Profile, House, Teams, Reward, BadgeCategory, Mentions
