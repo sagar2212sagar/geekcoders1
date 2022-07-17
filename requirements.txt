@@ -20,7 +20,7 @@ slackclient==2.9.3
 psycopg2-binary==2.8.6
 psycopg2-pool==1.1
 
-celery==5.0.0
+celery===5.2.2
 kombu==5.0.2
 vine==5.0.0
 postgres==3.0.0
