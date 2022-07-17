@@ -26,7 +26,7 @@ with open(BASE_DIR / 'configs/config.json') as config_file:
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 # Application definition
@@ -100,14 +100,15 @@ WSGI_APPLICATION = 'djangoProject.wsgi.application'
 
 DATABASES = {
      'default': {
-         'ENGINE': 'sql_server.pyodbc',
+         'ENGINE': 'mssql',
          'NAME': 'geekcoders2',
          'USER': 'geekcoders',
          'PASSWORD': 'Shivam2212@',
          'HOST': 'geekcoders2.database.windows.net',
          'PORT': '1433',
          'OPTIONS': {
-             'driver': 'ODBC Driver 13 for SQL Server',
+          
+             'driver': 'ODBC Driver 17 for SQL Server',
              'MARS_Connection': 'True',
          }
      }
@@ -148,7 +149,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static_in_env")]
 STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
