@@ -26,14 +26,14 @@ with open(BASE_DIR / 'configs/config.json') as config_file:
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'badge',
-    'goodies',
+    #'badge',
+    #'goodies',
     'grappelli',
     'django.contrib.admin',
     'crispy_forms',
@@ -49,10 +49,10 @@ INSTALLED_APPS = [
     'tinymce',
     'ckeditor',
     'colorfield',
-    'quiz',
-    'coding',
+    #'quiz',
+    #'coding',
     'csvexport',
-    'OKR',
+    #'OKR',
     'mathfilters',
 ]
 
@@ -134,8 +134,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_env')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 GRAPPELLI_ADMIN_TITLE = 'Sophists'
@@ -197,7 +197,7 @@ HCK_SECRET_KEY = config.get('HCK_SECRET_kEY')
 
 CKEDITOR_CONFIGS = {
     'default': {
-        # 'skin': 'moono-lisa',
+         'skin': 'moono-lisa',
         'skin': 'moono',
         'uiColor': '#b7d6ec',
         'toolbar_Basic': [
@@ -251,7 +251,7 @@ CKEDITOR_CONFIGS = {
             'embedsemantic',
             'autogrow',
             'mathjax',
-            # 'devtools',
+            #'devtools',
             'widget',
             'lineutils',
             'clipboard',
