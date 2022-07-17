@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
-from badge.views import badge_list
+#from badge.views import badge_list
+#from badge.views import badge_list
 
 urlpatterns = [
     path('login/', views.user_login, name='login'),
@@ -11,10 +12,10 @@ urlpatterns = [
     path('leaderboard/', views.leader, name='leaderboard'),
     path('members/', views.user_list_view, name='trainers'),
     path('search/', views.search, name='user-search'),
-    path('badge/<int:id>/', views.create_badge, name='new-badge'),
-    path('badge/', views.badge, name='badge'),
+    #path('badge/<int:id>/', views.create_badge, name='new-badge'),
+    #path('badge/', views.badge, name='badge'),
     path('multiple-badge/', views.multi_badge, name='multiple-badge'),
-    path('rewards/', badge_list, name='reward'),
+    #path('rewards/', badge_list, name='reward'),
     path('<int:pk>/', views.user_detail_view, name='user-detail'),
     path('logs/',views.get_logs , name='logs'),
     path('logs/profiles',views.get_profile_file , name='logs-profile'),
@@ -26,6 +27,6 @@ urlpatterns = [
     path('badge/slack/',views.slack_badge,name="slack-badge"),
     path('logs/okr/', views.okr_weekly, name="okr-weekly"),
 
-    # path('delete/rewards', views.delete_rewards, name='delete'),
+    #path('delete/rewards', views.delete_rewards, name='delete'),
     # Deleting rewards for quarter
 ]
